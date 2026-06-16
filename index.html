@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تطبيق تعلم اللغة الهولندية - الحروف الأبجدية</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- رأس الصفحة -->
+        <header class="header">
+            <h1>🇳🇱 تعلم الحروف الهولندية 🇳🇱</h1>
+            <p class="subtitle">Dutch Alphabet Learning</p>
+        </header>
+
+        <!-- شريط التقدم -->
+        <div class="progress-section">
+            <div class="progress-info">
+                <span>تقدمك: <span id="progress-text">0/26</span></span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+        </div>
+
+        <!-- المنطقة الرئيسية -->
+        <main class="main-content">
+            <!-- عرض الحرف الحالي -->
+            <div class="letter-display">
+                <div class="letter-card">
+                    <div class="letter-large" id="currentLetter">A</div>
+                    <div class="letter-info">
+                        <p class="letter-name" id="letterName">الحرف الأول</p>
+                        <p class="dutch-word" id="dutchWord">Apple - تفاحة</p>
+                    </div>
+                </div>
+
+                <!-- أزرار التحكم -->
+                <div class="controls">
+                    <button class="btn btn-primary" id="speakBtn">
+                        🔊 اسمع النطق
+                    </button>
+                    <button class="btn btn-secondary" id="nextBtn">
+                        التالي ➜
+                    </button>
+                    <button class="btn btn-secondary" id="prevBtn">
+                        ➜ السابق
+                    </button>
+                </div>
+            </div>
+
+            <!-- شريط الحروف السريع -->
+            <div class="alphabet-bar">
+                <h3>اختر حرفاً:</h3>
+                <div class="alphabet-grid" id="alphabetGrid"></div>
+            </div>
+
+            <!-- قسم التمارين -->
+            <div class="exercises-section">
+                <h3>📝 تمرين صوتي</h3>
+                <div class="exercise-card">
+                    <p id="exerciseQuestion">استمع وحدد الحرف الصحيح</p>
+                    <div class="exercise-buttons" id="exerciseButtons"></div>
+                    <button class="btn btn-success" id="playExerciseBtn">
+                        ▶️ شغل الصوت
+                    </button>
+                </div>
+            </div>
+
+            <!-- إحصائيات -->
+            <div class="stats-section">
+                <div class="stat-card">
+                    <span class="stat-label">حروف تعلمتها:</span>
+                    <span class="stat-value" id="learnedCount">0</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">نسبة النجاح:</span>
+                    <span class="stat-value" id="successRate">0%</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">عدد المحاولات:</span>
+                    <span class="stat-value" id="attemptCount">0</span>
+                </div>
+            </div>
+        </main>
+
+        <!-- تذييل الصفحة -->
+        <footer class="footer">
+            <p>🌍 تعلم اللغة الهولندية بسهولة | Learn Dutch Easily</p>
+        </footer>
+    </div>
+
+    <script src="alphabet.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
